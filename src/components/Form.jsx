@@ -34,33 +34,38 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
+                <div className='cotenet'></div>
                 <label>
-                    Nombre:
+                    Nombre:&nbsp;&nbsp;
                     <input type="text" name="name" value={formData.name}
                         onChange={handleChange} />
                 </label>
             </div>
+            <br />
             <div>
                 <label>
-                    Apellido:
+                    Apellido:&nbsp;&nbsp;
                     <input type="text" name="lastname" value={formData.lastname}
                         onChange={handleChange} />
                 </label>
             </div>
+            <br />
             <div>
                 <label>
-                    Edad:
+                    Edad:&nbsp;&nbsp;
                     <input type="number" name="age" value={formData.age}
                         onChange={handleChange} />
                 </label>
             </div>
+            <br />
             <div>
                 <label>
-                    Telefono:
+                    Telefono:&nbsp;&nbsp;
                     <input type="tel" name="phone" value={formData.phone}
                         onChange={handleChange} />
                 </label>
             </div>
+            <br />
             <button type="submit">Enviar</button>
             {message && <p>{message}</p>}  {/* Muestra el mensaje del servidor */}
         </form>

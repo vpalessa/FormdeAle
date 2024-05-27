@@ -4,8 +4,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #000000;
+  background-color: #f5f5f5;
+  /* Blanco hueso */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,25 +16,65 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ff4d4d;
+  /* Rojo */
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #cc0000;
+  /* Rojo oscuro */
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f5f5f5;
+  /* Blanco hueso */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  /* Blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+header .nav-links a {
+  color: #000000;
+  /* Negro */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .nav-links a:hover {
+  color: #ff4d4d;
+  /* Rojo */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #000000;
+  /* Negro */
 }
 
 button {
@@ -43,13 +84,17 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ff4d4d;
+  /* Rojo */
+  color: #ffffff;
+  /* Blanco */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: #cc0000;
+  /* Rojo oscuro */
 }
 
 button:focus,
@@ -59,15 +104,47 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #000000;
+    /* Negro */
+    background-color: #f5f5f5;
+    /* Blanco hueso */
   }
 
   a:hover {
-    color: #747bff;
+    color: #cc0000;
+    /* Rojo oscuro */
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: #ff4d4d;
+    /* Rojo */
   }
+}
+
+/* Adding space for logo and navigation links */
+header .logo img {
+  height: 50px;
+  /* Adjust as needed */
+}
+
+header .nav-links a {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.25s;
+}
+
+header .nav-links a:hover {
+  background-color: #f5f5f5;
+  /* Blanco hueso */
+}
+
+.App {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
